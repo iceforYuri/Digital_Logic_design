@@ -1,0 +1,64 @@
+module Display_Module(
+input in_display_setting,
+input [1:0]in_flash,
+input in_clk,
+
+input [5:0]in_bottle_num,
+input [5:0]in_pill_num,
+input [5:0]in_target_bottle_num,
+input [5:0]in_target_pill_num,
+
+input [1:0]in_warning_flag,
+input in_warning_enable,
+
+output reg [3:0]out_bottle_LED_1,
+output reg [3:0]out_bottle_LED_0,
+output reg [3:0]out_pill_LED_1,
+output reg [3:0]out_pill_LED_0,
+output [3:0]out_error_display
+);
+
+wire [3:0] bottle_1, bottle_0;
+wire [3:0] pill_1, pill_0;
+wire [3:0] target_bottle_1, target_bottle_0;
+wire [3:0] target_pill_1, target_pill_0;
+
+always@(*)
+begin
+	case({in_display_setting,in_flash})
+		3'b100:begin
+			out_bottle_LED_1=target_bottle_1;
+			out_bottle_LED_0=target_bottle_0;
+			out_pill_LED_1=target_pill_1;
+			out_pill_LED_0=target_pill_0;end
+		3'b110:begin
+			out_bottle_LED_1=(in_clk)?target_bottle_1:4'b1111;
+			out_bottle_LED_0=(in_clk)?target_bottle_0:4'b1111;
+			out_pill_LED_1=target_pill_1;
+			out_pill_LED_0=target_pill_0;end
+		3'b101:begin
+			out_bottle_LED_1=target_bottle_1;
+			out_bottle_LED_0=target_bottle_0;
+			out_pill_LED_1=(in_clk)?target_pill_1:4'b1111;
+			out_pill_LED_0=(in_clk)?target_pill_0:4'b1111;end
+		default begin
+			out_bottle_LED_1=bottle_1;
+			out_bottle_LED_0=bottle_0;
+			out_pill_LED_1=pill_1;
+			out_pill_LED_0=pill_0;end
+	endcase
+end
+
+assign bottle_1 = in_bottle_num/10;
+assign bottle_0 = in_bottle_num-bottle_1%10;
+assign pill_1 = in_pill_num / 10;
+assign pill_0 = in_pill_num %10;
+
+assign target_bottle_1 = in_target_bottle_num / 10;
+assign target_bottle_0 = in_target_bottle_num % 10;
+assign target_pill_1 = in_target_pill_num / 10;
+assign target_pill_0 = in_target_pill_num % 10;
+
+assign out_error_display=(in_warning_enable)?{2'b00,in_warning_flag}:4'b1111;
+
+endmodule

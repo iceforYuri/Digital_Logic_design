@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Pill_Bottling_System">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_a9h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_42m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_pnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_5kh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_42m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_7ql.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_5kh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_42m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_5ql.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_pnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_constant:scdw" CBX_FILE_NAME="lpm_constant_ii3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_constant:scdw" CBX_FILE_NAME="lpm_constant_ii3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_42m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_7ql.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub" CBX_FILE_NAME="add_sub_1ve.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_add_sub:add_sub" CBX_FILE_NAME="add_sub_1ve.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_vch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pill_Bottling_System|Display_Module:display_module|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_7ql.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

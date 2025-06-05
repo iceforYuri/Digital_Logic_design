@@ -1,0 +1,195 @@
+module Pill_Bottling_System(
+input	clk,
+input	warning_inclk,
+//main state switch input
+input 	QD,reset_state,			//K15
+input	display_setting,		//K0
+//s_opration
+input 	suspend,				//K1
+//setting
+input	PULSE,
+input	CLR,
+input	inc_five,				//K2
+//display output
+output 	[6:0]state_LED,
+output 	[3:0]bottle_LED_1,
+output 	[3:0]bottle_LED_0,
+output 	[3:0]pill_LED_1,
+output 	[3:0]pill_LED_0,
+output	[3:0]error_display,
+//warning about
+output	warning_outclk
+);
+
+//state
+reg 	[1:0]current_state,next_state;
+parameter s_zero=2'b00,s_operation=2'b01,s_report=2'b11;
+
+//display_mode
+reg		[1:0]current_display_state,next_display_state;
+parameter d_standard=2'b00,d_setting_bottle=2'b01,d_setting_pill=2'b11;
+wire	[1:0]flash;
+
+//counter_use
+wire 	[5:0]bottle_num;
+wire 	[5:0]pill_num;
+wire  	[5:0]target_bottle_num;
+wire 	[5:0]target_pill_num;
+wire	next_bottle;
+wire	finish;
+
+//alarm_use
+reg 	[1:0]warning_flag;
+reg 	[1:0]warning_countdown;
+wire	warning_enable;
+
+//=============================================
+//State_Change
+//=============================================
+always@(posedge QD,negedge reset_state)
+begin
+	if(!reset_state)
+		current_state<=s_zero;
+	else if(!display_setting)
+		current_state<=next_state;
+	else
+		current_state<=current_state;
+end
+
+always@(*)
+begin
+	case(current_state)
+		s_zero:begin
+			if((display_setting==0)&&(target_bottle_num==0||target_pill_num==0))begin
+				next_state=s_zero;
+				warning_flag[0]=1'b1;end
+			else begin
+				warning_flag[0]=1'b0;
+				next_state=s_operation;end
+		end
+		s_operation:begin
+			if(finish)
+				next_state=s_zero;
+			else
+				next_state=s_report; end
+		s_report:begin
+			next_state=s_zero; end
+		default:begin
+			next_state=s_zero; end
+	endcase
+end
+
+always@(posedge QD,negedge display_setting)
+begin
+	if(!display_setting)
+		current_display_state<=d_standard;
+	else
+		current_display_state<=next_display_state;
+end
+
+always@(*)
+begin
+	case(current_display_state)
+		d_standard:begin
+			if(current_state==s_operation)begin
+				warning_flag[1]=1'b1;
+				next_display_state=d_standard;end
+			else begin
+				next_display_state=d_setting_bottle;
+				warning_flag[1]=1'b0;end
+		end
+		d_setting_bottle:begin
+			next_display_state=d_setting_pill;
+		end
+		d_setting_pill:begin
+			next_display_state=d_standard;
+		end
+		default:begin
+			next_display_state=d_standard;
+		end
+	endcase
+end
+
+//=============================================
+//Warning_Module
+//=============================================
+assign warning_outclk=warning_enable&&warning_inclk;
+assign warning_enable=(warning_flag!=2'b0)&&(warning_countdown!=2'b00);
+always@(posedge clk,posedge QD)
+begin
+	if(QD)
+		if((!(display_setting)&&(target_bottle_num==0||target_pill_num==0))||(display_setting))
+			warning_countdown<=2'b10;
+		else
+			warning_countdown<=2'b00;
+	else begin
+		if(warning_countdown!=2'b00)
+			warning_countdown<=warning_countdown-2'b1;
+		else
+			warning_countdown<=2'b0;
+	end
+end
+
+//============================================
+//Counter_Module
+//=============================================
+Counter_Module counter_module(
+.in_clk(clk),
+.in_state(current_state),
+.in_suspend(suspend),
+.in_target_bottle_num(target_bottle_num),
+.in_target_pill_num(target_pill_num),
+.out_bottle_num(bottle_num),
+.out_pill_num(pill_num),
+.out_next_bottle(next_bottle),
+.out_finish(finish)
+);
+
+//=============================================
+//State_Display_Module
+//=============================================
+State_Display_Module state_display_module(
+.in_state(current_state),
+.in_suspend(suspend),
+.in_finish(finish),
+.in_next_bottle(next_bottle),
+.in_setting(display_setting),
+.in_warning_enable(warning_enable),
+.out_7_LED(state_LED)
+);
+
+//=============================================
+//Display_Module
+//=============================================
+Display_Module display_module(
+.in_display_setting(display_setting),
+.in_flash(flash),
+.in_clk(clk),
+.in_bottle_num(bottle_num),
+.in_pill_num(pill_num),
+.in_target_bottle_num(target_bottle_num),
+.in_target_pill_num(target_pill_num),
+.in_warning_flag(warning_flag),
+.in_warning_enable(warning_enable),
+.out_bottle_LED_1(bottle_LED_1),
+.out_bottle_LED_0(bottle_LED_0),
+.out_pill_LED_1(pill_LED_1),
+.out_pill_LED_0(pill_LED_0),
+.out_error_display(error_display)
+);
+
+//=============================================
+//Modify_Setting_Module
+//=============================================
+Modify_Setting_Module modify_setting_module(
+.in_display_state(current_display_state),
+.in_display_setting(display_setting),
+.in_CLR(CLR),
+.in_PULSE(PULSE),
+.in_inc_five(inc_five),
+.out_flash(flash),
+.out_target_bottle_num(target_bottle_num),
+.out_target_pill_num(target_pill_num)
+);
+
+endmodule

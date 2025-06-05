@@ -1,0 +1,96 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 08:22:15  April 13, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Pill_Bottling_System_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SLC84-15"
+set_global_assignment -name TOP_LEVEL_ENTITY Pill_Bottling_System
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:22:15  APRIL 13, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_1 -to CLR
+set_location_assignment PIN_61 -to PULSE
+set_location_assignment PIN_60 -to QD
+set_location_assignment PIN_29 -to bottle_LED_0[3]
+set_location_assignment PIN_28 -to bottle_LED_0[2]
+set_location_assignment PIN_27 -to bottle_LED_0[1]
+set_location_assignment PIN_25 -to bottle_LED_0[0]
+set_location_assignment PIN_24 -to bottle_LED_1[3]
+set_location_assignment PIN_22 -to bottle_LED_1[2]
+set_location_assignment PIN_21 -to bottle_LED_1[1]
+set_location_assignment PIN_20 -to bottle_LED_1[0]
+set_location_assignment PIN_58 -to clk
+set_location_assignment PIN_54 -to display_setting
+set_location_assignment PIN_41 -to error_display[3]
+set_location_assignment PIN_40 -to error_display[2]
+set_location_assignment PIN_39 -to error_display[1]
+set_location_assignment PIN_37 -to error_display[0]
+set_location_assignment PIN_80 -to inc_five
+set_location_assignment PIN_18 -to pill_LED_0[3]
+set_location_assignment PIN_17 -to pill_LED_0[2]
+set_location_assignment PIN_36 -to pill_LED_0[1]
+set_location_assignment PIN_35 -to pill_LED_0[0]
+set_location_assignment PIN_34 -to pill_LED_1[3]
+set_location_assignment PIN_33 -to pill_LED_1[2]
+set_location_assignment PIN_31 -to pill_LED_1[1]
+set_location_assignment PIN_30 -to pill_LED_1[0]
+set_location_assignment PIN_63 -to reset_state
+set_location_assignment PIN_44 -to state_LED[6]
+set_location_assignment PIN_45 -to state_LED[5]
+set_location_assignment PIN_46 -to state_LED[4]
+set_location_assignment PIN_48 -to state_LED[3]
+set_location_assignment PIN_49 -to state_LED[2]
+set_location_assignment PIN_50 -to state_LED[1]
+set_location_assignment PIN_51 -to state_LED[0]
+set_location_assignment PIN_81 -to suspend
+set_global_assignment -name MISC_FILE "D:/QuartusII/quartus/[new things/Pill_Bottling_System4/Pill_Bottling_System.dpf"
+set_global_assignment -name VERILOG_FILE Pill_Bottling_System.v
+set_global_assignment -name VERILOG_FILE Counter_Module.v
+set_global_assignment -name VERILOG_FILE State_Display_Module.v
+set_global_assignment -name VERILOG_FILE Display_Module.v
+set_global_assignment -name VERILOG_FILE Modify_Setting_Module.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Pill_Bottling_System.vwf
+set_location_assignment PIN_57 -to warning_inclk
+set_location_assignment PIN_52 -to warning_outclk
+set_global_assignment -name MISC_FILE "D:/QuartusII/quartus/[new things/Pill_Bottling_System5/Pill_Bottling_System.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/[new things/Pill_Bottling_System5/Pill_Bottling_System.dpf"
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF

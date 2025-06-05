@@ -1,0 +1,9 @@
+Fitter Status : Successful - Wed May 28 19:26:25 2025
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : Pill_Bottling_System
+Top-level Entity Name : Pill_Bottling_System
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 115 / 128 ( 90 % )
+Total pins : 41 / 68 ( 60 % )

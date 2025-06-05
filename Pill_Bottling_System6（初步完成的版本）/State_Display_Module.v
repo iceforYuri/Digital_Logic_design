@@ -1,0 +1,48 @@
+module State_Display_Module(
+input [1:0]in_state,
+input in_suspend,
+input in_finish,
+input in_next_bottle,
+input in_setting,
+input in_warning_enable,
+
+output reg [6:0]out_7_LED
+);
+
+parameter s_zero=2'b00,s_operation=2'b01,s_report=2'b10;
+parameter d_standard=2'b00,d_setting_bottle=2'b01,d_setting_pill=2'b11;
+
+parameter c_E=7'b1001111;//79 character_Error
+parameter c_S=7'b1011011;//91 character_Setting
+parameter c_P=7'b1100111;//103 character_Pause
+parameter c_0=7'b1111110;//126 character_Zero
+parameter g_u=7'b1000000;//64 graph_up_line			for working
+parameter g_b_report=7'b0001000;//8 graph_under_line	for report
+parameter g_t=7'b1001001;//73 graph_three_line			for next bottle
+
+always@(*)
+begin
+	if(in_warning_enable)
+		out_7_LED=c_E;
+	else if(in_setting)
+		out_7_LED=c_S;
+	else begin
+		case(in_state)
+			s_zero:
+				out_7_LED=c_0;
+			s_operation:begin
+				case({in_finish,in_next_bottle})
+					2'b10:
+						out_7_LED=g_b_report;
+					2'b01:
+						out_7_LED=(in_suspend)?c_P:g_t;
+					default:
+						out_7_LED=(in_suspend)?c_P:g_u;
+				endcase end
+			default:begin
+				out_7_LED=g_b_report;end
+		endcase
+	end
+end
+
+endmodule

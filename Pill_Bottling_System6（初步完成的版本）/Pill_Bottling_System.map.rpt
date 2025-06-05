@@ -1,0 +1,1053 @@
+Analysis & Synthesis report for Pill_Bottling_System
+Wed May 28 19:26:13 2025
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0
+  9. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder
+ 10. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0]
+ 11. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1
+ 12. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_add_sub:add_sub|addcore:adder
+ 13. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0]
+ 14. Source assignments for Display_Module:display_module|lpm_add_sub:Add0|addcore:adder
+ 15. Source assignments for Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]
+ 16. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder
+ 17. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]
+ 18. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2|addcore:adder
+ 19. Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2|addcore:adder|addcore:adder[0]
+ 20. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder
+ 21. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]
+ 22. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add1|addcore:adder
+ 23. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]
+ 24. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder
+ 25. Source assignments for Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder|addcore:adder[0]
+ 26. Parameter Settings for User Entity Instance: Top-level Entity: |Pill_Bottling_System
+ 27. Parameter Settings for User Entity Instance: Counter_Module:counter_module
+ 28. Parameter Settings for User Entity Instance: State_Display_Module:state_display_module
+ 29. Parameter Settings for User Entity Instance: Modify_Setting_Module:modify_setting_module
+ 30. Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0
+ 31. Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1
+ 32. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div2
+ 34. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod0
+ 35. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_add_sub:Add0
+ 36. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod2
+ 37. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div1
+ 38. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div3
+ 39. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod1
+ 40. Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod3
+ 41. Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0
+ 42. Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2
+ 43. Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add0
+ 44. Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add1
+ 45. Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add2
+ 46. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed May 28 19:26:13 2025        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; Pill_Bottling_System                         ;
+; Top-level Entity Name       ; Pill_Bottling_System                         ;
+; Family                      ; MAX7000S                                     ;
+; Total macrocells            ; 115                                          ;
+; Total pins                  ; 37                                           ;
++-----------------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++--------------------------------------------------------------+----------------------+----------------------+
+; Option                                                       ; Setting              ; Default Value        ;
++--------------------------------------------------------------+----------------------+----------------------+
+; Device                                                       ; EPM7128SLC84-15      ;                      ;
+; Top-level entity name                                        ; Pill_Bottling_System ; Pill_Bottling_System ;
+; Family name                                                  ; MAX7000S             ; Stratix II           ;
+; Use Generated Physical Constraints File                      ; Off                  ;                      ;
+; Use smart compilation                                        ; Off                  ; Off                  ;
+; Create Debugging Nodes for IP Cores                          ; Off                  ; Off                  ;
+; Preserve fewer node names                                    ; On                   ; On                   ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                  ; Off                  ;
+; Verilog Version                                              ; Verilog_2001         ; Verilog_2001         ;
+; VHDL Version                                                 ; VHDL93               ; VHDL93               ;
+; State Machine Processing                                     ; Auto                 ; Auto                 ;
+; Safe State Machine                                           ; Off                  ; Off                  ;
+; Extract Verilog State Machines                               ; On                   ; On                   ;
+; Extract VHDL State Machines                                  ; On                   ; On                   ;
+; Ignore Verilog initial constructs                            ; Off                  ; Off                  ;
+; Iteration limit for constant Verilog loops                   ; 5000                 ; 5000                 ;
+; Iteration limit for non-constant Verilog loops               ; 250                  ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                   ; On                   ;
+; Parallel Synthesis                                           ; Off                  ; Off                  ;
+; NOT Gate Push-Back                                           ; On                   ; On                   ;
+; Power-Up Don't Care                                          ; On                   ; On                   ;
+; Remove Duplicate Registers                                   ; On                   ; On                   ;
+; Ignore CARRY Buffers                                         ; Off                  ; Off                  ;
+; Ignore CASCADE Buffers                                       ; Off                  ; Off                  ;
+; Ignore GLOBAL Buffers                                        ; Off                  ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                  ; Off                  ;
+; Ignore LCELL Buffers                                         ; Auto                 ; Auto                 ;
+; Ignore SOFT Buffers                                          ; Off                  ; Off                  ;
+; Limit AHDL Integers to 32 Bits                               ; Off                  ; Off                  ;
+; Optimization Technique                                       ; Speed                ; Speed                ;
+; Allow XOR Gate Usage                                         ; On                   ; On                   ;
+; Auto Logic Cell Insertion                                    ; On                   ; On                   ;
+; Parallel Expander Chain Length                               ; 4                    ; 4                    ;
+; Auto Parallel Expanders                                      ; On                   ; On                   ;
+; Auto Open-Drain Pins                                         ; On                   ; On                   ;
+; Auto Resource Sharing                                        ; Off                  ; Off                  ;
+; Maximum Fan-in Per Macrocell                                 ; 100                  ; 100                  ;
+; Use LogicLock Constraints during Resource Balancing          ; On                   ; On                   ;
+; Ignore translate_off and synthesis_off directives            ; Off                  ; Off                  ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                   ; On                   ;
+; HDL message level                                            ; Level2               ; Level2               ;
+; Suppress Register Optimization Related Messages              ; Off                  ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                  ; 100                  ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                  ; 100                  ;
+; Block Design Naming                                          ; Auto                 ; Auto                 ;
+; Synthesis Effort                                             ; Auto                 ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                   ; On                   ;
+; Analysis & Synthesis Message Level                           ; Medium               ; Medium               ;
++--------------------------------------------------------------+----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+
+; Pill_Bottling_System.v           ; yes             ; User Verilog HDL File        ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/Pill_Bottling_System.v     ;
+; Counter_Module.v                 ; yes             ; User Verilog HDL File        ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/Counter_Module.v           ;
+; State_Display_Module.v           ; yes             ; User Verilog HDL File        ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/State_Display_Module.v     ;
+; Display_Module.v                 ; yes             ; User Verilog HDL File        ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/Display_Module.v           ;
+; Modify_Setting_Module.v          ; yes             ; User Verilog HDL File        ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/Modify_Setting_Module.v    ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_counter.tdf                                        ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_constant.inc                                       ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_decode.inc                                         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/cmpconst.inc                                           ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_compare.inc                                        ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_counter.inc                                        ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/dffeea.inc                                             ;
+; alt_synch_counter.inc            ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_synch_counter.inc                                  ;
+; alt_synch_counter_f.inc          ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_synch_counter_f.inc                                ;
+; alt_counter_f10ke.inc            ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_counter_f10ke.inc                                  ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_counter_stratix.inc                                ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/aglobal90.inc                                          ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_add_sub.tdf                                        ;
+; addcore.inc                      ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/addcore.inc                                            ;
+; look_add.inc                     ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/look_add.inc                                           ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/bypassff.inc                                           ;
+; altshift.inc                     ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/altshift.inc                                           ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                ;
+; addcore.tdf                      ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/addcore.tdf                                            ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/a_csnbuffer.inc                                        ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/a_csnbuffer.tdf                                        ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/altshift.tdf                                           ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_constant.tdf                                       ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/lpm_divide.tdf                                         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/abs_divider.inc                                        ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartusii/quartus/libraries/megafunctions/sign_div_unsign.inc                                    ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/lpm_divide_42m.tdf      ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/sign_div_unsign_dkh.tdf ;
+; db/alt_u_div_pke.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/alt_u_div_pke.tdf       ;
+; db/add_sub_m9c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/add_sub_m9c.tdf         ;
+; db/add_sub_n9c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/add_sub_n9c.tdf         ;
+; db/add_sub_o9c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/add_sub_o9c.tdf         ;
+; db/add_sub_p9c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/add_sub_p9c.tdf         ;
+; db/add_sub_q9c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/add_sub_q9c.tdf         ;
+; db/lpm_divide_5ql.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/lpm_divide_5ql.tdf      ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/sign_div_unsign_bkh.tdf ;
+; db/alt_u_div_lke.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/alt_u_div_lke.tdf       ;
+; db/lpm_divide_7ql.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/QuartusII/quartus/[new things/Pill_Bottling_System6（初步完成的版本）/db/lpm_divide_7ql.tdf      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 115                  ;
+; Total registers      ; 32                   ;
+; I/O pins             ; 37                   ;
+; Shareable expanders  ; 25                   ;
+; Parallel expanders   ; 30                   ;
+; Maximum fan-out node ; display_setting      ;
+; Maximum fan-out      ; 79                   ;
+; Total fan-out        ; 1066                 ;
+; Average fan-out      ; 6.02                 ;
++----------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++--------------------------------------------------+------------+------+------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                       ; Macrocells ; Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
++--------------------------------------------------+------------+------+------------------------------------------------------------------------------------------------------------+--------------+
+; |Pill_Bottling_System                            ; 115        ; 37   ; |Pill_Bottling_System                                                                                      ; work         ;
+;    |Counter_Module:counter_module|               ; 33         ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module                                                        ; work         ;
+;       |lpm_add_sub:Add0|                         ; 2          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add0                                       ; work         ;
+;          |addcore:adder|                         ; 2          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+;             |addcore:adder[0]|                   ; 2          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]        ; work         ;
+;       |lpm_add_sub:Add2|                         ; 0          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add2                                       ; work         ;
+;          |addcore:adder|                         ; 0          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder                         ; work         ;
+;             |a_csnbuffer:result_node|            ; 0          ; 0    ; |Pill_Bottling_System|Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |Display_Module:display_module|               ; 46         ; 0    ; |Pill_Bottling_System|Display_Module:display_module                                                        ; work         ;
+;       |lpm_add_sub:Add0|                         ; 6          ; 0    ; |Pill_Bottling_System|Display_Module:display_module|lpm_add_sub:Add0                                       ; work         ;
+;          |addcore:adder|                         ; 6          ; 0    ; |Pill_Bottling_System|Display_Module:display_module|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+;             |a_csnbuffer:result_node|            ; 6          ; 0    ; |Pill_Bottling_System|Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |Modify_Setting_Module:modify_setting_module| ; 12         ; 0    ; |Pill_Bottling_System|Modify_Setting_Module:modify_setting_module                                          ; work         ;
+;       |lpm_counter:out_target_bottle_num_rtl_0|  ; 6          ; 0    ; |Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0  ; work         ;
+;       |lpm_counter:out_target_pill_num_rtl_1|    ; 6          ; 0    ; |Pill_Bottling_System|Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1    ; work         ;
+;    |State_Display_Module:state_display_module|   ; 11         ; 0    ; |Pill_Bottling_System|State_Display_Module:state_display_module                                            ; work         ;
++--------------------------------------------------+------------+------+------------------------------------------------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                  ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+; warning_flag[1]                                    ; Modify_Setting_Module:modify_setting_module|Decoder0 ; yes                    ;
+; warning_flag[0]                                    ; State_Display_Module:state_display_module|Equal2     ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                                                      ;                        ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0 ;
++---------------------------+-------+------+-----------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                              ;
++---------------------------+-------+------+-----------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                               ;
++---------------------------+-------+------+-----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder ;
++---------------------------+-------+------+---------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                ;
++---------------------------+-------+------+---------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                                                 ;
++---------------------------+-------+------+---------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                                 ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                                                                  ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1 ;
++---------------------------+-------+------+---------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                            ;
++---------------------------+-------+------+---------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                             ;
++---------------------------+-------+------+---------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_add_sub:add_sub|addcore:adder ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                              ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                                               ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                               ;
++---------------------------+-------+------+------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                                                                ;
++---------------------------+-------+------+------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Source assignments for Display_Module:display_module|lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+------------------------------------------+
+; Assignment                ; Value ; From ; To                                       ;
++---------------------------+-------+------+------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                        ;
++---------------------------+-------+------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                        ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                         ;
++---------------------------+-------+------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+--------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                     ;
++---------------------------+-------+------+--------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                      ;
++---------------------------+-------+------+--------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                      ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                       ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2|addcore:adder ;
++---------------------------+-------+------+--------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                     ;
++---------------------------+-------+------+--------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                      ;
++---------------------------+-------+------+--------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                      ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                                       ;
++---------------------------+-------+------+-------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+------------------------------------------+
+; Assignment                ; Value ; From ; To                                       ;
++---------------------------+-------+------+------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                        ;
++---------------------------+-------+------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                        ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                         ;
++---------------------------+-------+------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add1|addcore:adder ;
++---------------------------+-------+------+------------------------------------------+
+; Assignment                ; Value ; From ; To                                       ;
++---------------------------+-------+------+------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                        ;
++---------------------------+-------+------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add1|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                        ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                         ;
++---------------------------+-------+------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder ;
++---------------------------+-------+------+------------------------------------------+
+; Assignment                ; Value ; From ; To                                       ;
++---------------------------+-------+------+------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                        ;
++---------------------------+-------+------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for Counter_Module:counter_module|lpm_add_sub:Add2|addcore:adder|addcore:adder[0] ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                        ;
++---------------------------+-------+------+-----------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                         ;
++---------------------------+-------+------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Pill_Bottling_System ;
++------------------+-------+-----------------------------------------------------------+
+; Parameter Name   ; Value ; Type                                                      ;
++------------------+-------+-----------------------------------------------------------+
+; s_zero           ; 00    ; Unsigned Binary                                           ;
+; s_operation      ; 01    ; Unsigned Binary                                           ;
+; s_report         ; 11    ; Unsigned Binary                                           ;
+; d_standard       ; 00    ; Unsigned Binary                                           ;
+; d_setting_bottle ; 01    ; Unsigned Binary                                           ;
+; d_setting_pill   ; 11    ; Unsigned Binary                                           ;
++------------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter_Module:counter_module ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; s_zero         ; 00    ; Unsigned Binary                                   ;
+; s_operation    ; 01    ; Unsigned Binary                                   ;
+; s_report       ; 11    ; Unsigned Binary                                   ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: State_Display_Module:state_display_module ;
++------------------+---------+-----------------------------------------------------------+
+; Parameter Name   ; Value   ; Type                                                      ;
++------------------+---------+-----------------------------------------------------------+
+; s_zero           ; 00      ; Unsigned Binary                                           ;
+; s_operation      ; 01      ; Unsigned Binary                                           ;
+; s_report         ; 10      ; Unsigned Binary                                           ;
+; d_standard       ; 00      ; Unsigned Binary                                           ;
+; d_setting_bottle ; 01      ; Unsigned Binary                                           ;
+; d_setting_pill   ; 11      ; Unsigned Binary                                           ;
+; c_E              ; 1001111 ; Unsigned Binary                                           ;
+; c_S              ; 1011011 ; Unsigned Binary                                           ;
+; c_P              ; 1100111 ; Unsigned Binary                                           ;
+; c_0              ; 1111110 ; Unsigned Binary                                           ;
+; g_u              ; 1000000 ; Unsigned Binary                                           ;
+; g_b_report       ; 0001000 ; Unsigned Binary                                           ;
+; g_t              ; 1001001 ; Unsigned Binary                                           ;
++------------------+---------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Modify_Setting_Module:modify_setting_module ;
++------------------+-------+---------------------------------------------------------------+
+; Parameter Name   ; Value ; Type                                                          ;
++------------------+-------+---------------------------------------------------------------+
+; d_standard       ; 00    ; Unsigned Binary                                               ;
+; d_setting_bottle ; 01    ; Unsigned Binary                                               ;
+; d_setting_pill   ; 11    ; Unsigned Binary                                               ;
+; s_zero           ; 00    ; Unsigned Binary                                               ;
+; s_operation      ; 01    ; Unsigned Binary                                               ;
+; s_report         ; 11    ; Unsigned Binary                                               ;
++------------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0 ;
++------------------------+-------------------+-----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                                                    ;
++------------------------+-------------------+-----------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                                            ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                                          ;
+; LPM_WIDTH              ; 6                 ; Untyped                                                                                 ;
+; LPM_DIRECTION          ; UP                ; Untyped                                                                                 ;
+; LPM_MODULUS            ; 0                 ; Untyped                                                                                 ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                                                 ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                                                 ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                                                 ;
+; DEVICE_FAMILY          ; MAX7000S          ; Untyped                                                                                 ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                                      ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                                      ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                                                 ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                                                 ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                                                 ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                                                                 ;
++------------------------+-------------------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_pill_num_rtl_1 ;
++------------------------+-------------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                                                  ;
++------------------------+-------------------+---------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                                        ;
+; LPM_WIDTH              ; 6                 ; Untyped                                                                               ;
+; LPM_DIRECTION          ; UP                ; Untyped                                                                               ;
+; LPM_MODULUS            ; 0                 ; Untyped                                                                               ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                                               ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                                               ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                                               ;
+; DEVICE_FAMILY          ; MAX7000S          ; Untyped                                                                               ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                                    ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                                    ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                                               ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                                               ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                                               ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                                                               ;
++------------------------+-------------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_5ql ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_add_sub:Add0 ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; LPM_WIDTH              ; 5           ; Untyped                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                  ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                  ;
+; USE_WYS                ; OFF         ; Untyped                                                  ;
+; STYLE                  ; FAST        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; add_sub_a9h ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_7ql ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_7ql ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Module:display_module|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_7ql ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 9              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0 ;
++------------------------+-------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                   ;
++------------------------+-------------+------------------------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                                ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                                ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                     ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                                ;
+; USE_WYS                ; OFF         ; Untyped                                                                ;
+; STYLE                  ; FAST        ; Untyped                                                                ;
+; CBXI_PARAMETER         ; add_sub_pnh ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                         ;
++------------------------+-------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add2 ;
++------------------------+-------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                   ;
++------------------------+-------------+------------------------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                                ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                                ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                     ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                                ;
+; USE_WYS                ; OFF         ; Untyped                                                                ;
+; STYLE                  ; FAST        ; Untyped                                                                ;
+; CBXI_PARAMETER         ; add_sub_pnh ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                         ;
++------------------------+-------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add0 ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                  ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                  ;
+; USE_WYS                ; OFF         ; Untyped                                                  ;
+; STYLE                  ; FAST        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; add_sub_vch ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add1 ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                  ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                  ;
+; USE_WYS                ; OFF         ; Untyped                                                  ;
+; STYLE                  ; FAST        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; add_sub_5kh ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Counter_Module:counter_module|lpm_add_sub:Add2 ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Untyped                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                  ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                  ;
+; USE_WYS                ; OFF         ; Untyped                                                  ;
+; STYLE                  ; FAST        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; add_sub_5kh ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 28 19:26:09 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pill_Bottling_System -c Pill_Bottling_System
+Info: Found 1 design units, including 1 entities, in source file Pill_Bottling_System.v
+    Info: Found entity 1: Pill_Bottling_System
+Info: Found 1 design units, including 1 entities, in source file Counter_Module.v
+    Info: Found entity 1: Counter_Module
+Info: Found 1 design units, including 1 entities, in source file State_Display_Module.v
+    Info: Found entity 1: State_Display_Module
+Info: Found 1 design units, including 1 entities, in source file Display_Module.v
+    Info: Found entity 1: Display_Module
+Info: Found 1 design units, including 1 entities, in source file Modify_Setting_Module.v
+    Info: Found entity 1: Modify_Setting_Module
+Info: Elaborating entity "Pill_Bottling_System" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at Pill_Bottling_System.v(61): inferring latch(es) for variable "warning_flag", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Pill_Bottling_System.v(92): inferring latch(es) for variable "warning_flag", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "warning_flag[1]" at Pill_Bottling_System.v(92)
+Info (10041): Inferred latch for "warning_flag[0]" at Pill_Bottling_System.v(61)
+Info: Elaborating entity "Counter_Module" for hierarchy "Counter_Module:counter_module"
+Warning (10230): Verilog HDL assignment warning at Counter_Module.v(29): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at Counter_Module.v(30): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at Counter_Module.v(31): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "State_Display_Module" for hierarchy "State_Display_Module:state_display_module"
+Info (10264): Verilog HDL Case Statement information at State_Display_Module.v(34): all case item expressions in this case statement are onehot
+Info: Elaborating entity "Display_Module" for hierarchy "Display_Module:display_module"
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(52): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(53): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(54): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(55): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(57): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(58): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(59): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Display_Module.v(60): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "Modify_Setting_Module" for hierarchy "Modify_Setting_Module:modify_setting_module"
+Warning (10230): Verilog HDL assignment warning at Modify_Setting_Module.v(38): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at Modify_Setting_Module.v(40): truncated value with size 32 to match size of target (6)
+Info: Inferred 2 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=6) from the following logic: "Modify_Setting_Module:modify_setting_module|out_target_bottle_num[0]~19"
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=6) from the following logic: "Modify_Setting_Module:modify_setting_module|out_target_pill_num[0]~19"
+Info: Inferred 14 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Div2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Mod0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Display_Module:display_module|Add0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Mod2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Div1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Div3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Module:display_module|Mod3"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Modify_Setting_Module:modify_setting_module|Add0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Modify_Setting_Module:modify_setting_module|Add2"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Counter_Module:counter_module|Add0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Counter_Module:counter_module|Add1"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Counter_Module:counter_module|Add2"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Instantiated megafunction "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0]", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0]|a_csnbuffer:oflow_node", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|addcore:adder|addcore:adder[0]|a_csnbuffer:result_node", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_add_sub:add_sub|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0|lpm_constant:scdw", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_counter:out_target_bottle_num_rtl_0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_divide:Div0"
+Info: Instantiated megafunction "Display_Module:display_module|lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "6"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info: Found entity 1: lpm_divide_42m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info: Found entity 1: sign_div_unsign_dkh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_pke.tdf
+    Info: Found entity 1: alt_u_div_pke
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_m9c.tdf
+    Info: Found entity 1: add_sub_m9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_n9c.tdf
+    Info: Found entity 1: add_sub_n9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_o9c.tdf
+    Info: Found entity 1: add_sub_o9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_p9c.tdf
+    Info: Found entity 1: add_sub_p9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_q9c.tdf
+    Info: Found entity 1: add_sub_q9c
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_divide:Mod0"
+Info: Instantiated megafunction "Display_Module:display_module|lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "4"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_5ql.tdf
+    Info: Found entity 1: lpm_divide_5ql
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info: Found entity 1: sign_div_unsign_bkh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_lke.tdf
+    Info: Found entity 1: alt_u_div_lke
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Instantiated megafunction "Display_Module:display_module|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "5"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]", which is child of megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "Display_Module:display_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Display_Module:display_module|lpm_divide:Mod2"
+Info: Instantiated megafunction "Display_Module:display_module|lpm_divide:Mod2" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "6"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_7ql.tdf
+    Info: Found entity 1: lpm_divide_7ql
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0"
+Info: Instantiated megafunction "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]", which is child of megafunction instantiation "Modify_Setting_Module:modify_setting_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add0"
+Info: Instantiated megafunction "Counter_Module:counter_module|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]", which is child of megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "Counter_Module:counter_module|lpm_add_sub:Add1"
+Info: Instantiated megafunction "Counter_Module:counter_module|lpm_add_sub:Add1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Ignored 140 buffer(s)
+    Info: Ignored 94 CARRY_SUM buffer(s)
+    Info: Ignored 46 SOFT buffer(s)
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLR"
+Info: Implemented 177 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 28 output pins
+    Info: Implemented 115 macrocells
+    Info: Implemented 25 shareable expanders
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Wed May 28 19:26:24 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:05
+
+

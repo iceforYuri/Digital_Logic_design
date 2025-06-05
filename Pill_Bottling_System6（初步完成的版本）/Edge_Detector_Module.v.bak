@@ -1,0 +1,12 @@
+module Edge_Detector_Module(
+    input clk,          
+    input signal,       
+    output reg edge_pos 
+);
+    reg signal_d;  
+
+    always @(posedge clk) begin
+        signal_d <= signal; 
+        edge_pos <= (signal && !signal_d);  
+    end
+endmodule
