@@ -5,15 +5,15 @@ module key_handle(
     output reg set_shift,       // 位置调整键电平信号
     output reg set_time         // 时间调整键电平信号
 );
-
-    // 设置移位键的上升沿检测
+    //将上升沿转换成一次一个时钟周期的电平信号
+    // 信号延时一周期
     reg set_shift_pre_r;
     always @(posedge clk) begin
         set_shift_pre_r <= set_shift_pre;
     end
-    wire set_shift_pos = set_shift_pre & (~set_shift_pre_r); // 上升沿检测
-    
-    // 设置时间键的上升沿检测
+    //// 检测上升沿：当前为高电平且前一个时钟周期为低电平
+    wire set_shift_pos = set_shift_pre & (~set_shift_pre_r); 
+
     reg set_time_pre_r;
     always @(posedge clk) begin
         set_time_pre_r <= set_time_pre;

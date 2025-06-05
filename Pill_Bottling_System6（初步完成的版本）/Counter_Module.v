@@ -1,11 +1,11 @@
 module Counter_Module(
-input in_clk,                     // ÏµÍ³Ê±ÖÓÊäÈë
+input in_clk,                     // ÏµÍ³Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 input [1:0]in_state,
-input in_suspend,                 // ÔİÍ£¼ÆÊıĞÅºÅ(1=ÔİÍ££¬0=ÔËĞĞ)
+input in_suspend,                 // ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½(1=ï¿½ï¿½Í£ï¿½ï¿½0=ï¿½ï¿½ï¿½ï¿½)
 input [5:0] in_target_bottle_num, 
 input [5:0] in_target_pill_num,
-output reg [5:0] out_bottle_num,  // µ±Ç°ÒÑ×°ºÃµÄÒ©Æ¿ÊıÁ¿Êä³ö
-output reg [5:0] out_pill_num,     // µ±Ç°Ò©Æ¿ÖĞÒÑ×°ÈëµÄÒ©Æ¬ÊıÁ¿Êä³ö
+output reg [5:0] out_bottle_num,  // ï¿½ï¿½Ç°ï¿½ï¿½×°ï¿½Ãµï¿½Ò©Æ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+output reg [5:0] out_pill_num,     // ï¿½ï¿½Ç°Ò©Æ¿ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Ò©Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 output reg out_finish,
 output reg out_next_bottle
 );
@@ -15,25 +15,36 @@ parameter s_zero=2'b00,s_operation=2'b01,s_report=2'b11;
 always@(posedge in_clk) 
 begin
 	case(in_state)
+		//è£…ç“¶å¤ä½
 		s_zero: begin
 			out_bottle_num <= 6'b0;     
 			out_pill_num <= 6'b0;
 			out_next_bottle<=1'b0;
 			out_finish<=1'b0; end
 		s_operation: begin
-			if(out_bottle_num==in_target_bottle_num)begin
+			if(out_bottle_num==in_target_bottle_num)
+			// å·²å®Œæˆ
+			begin
 				out_finish<=1'b1;
-				out_next_bottle<=1'b0;end
-			else begin
-				if (out_pill_num == in_target_pill_num-1'b1) begin
+				out_next_bottle<=1'b0;
+			end
+			else 
+			begin
+				if (out_pill_num == in_target_pill_num-1'b1) 
+				// å½“å‰ç“¶è£…æ»¡æ—¶
+				begin
 					out_bottle_num <=(in_suspend)?out_bottle_num: out_bottle_num + 1;
 					out_pill_num <=(in_suspend)?out_pill_num: 0;
 					out_next_bottle <= (in_suspend)?0:1;
-					out_finish<=1'b0; end			
-				else begin
+					out_finish<=1'b0; 
+				end			
+				else 
+				// ç»§ç»­
+				begin
 					out_pill_num<=(in_suspend)?out_pill_num:out_pill_num+1'b1;
 					out_next_bottle <= 0;
-					out_finish<=1'b0; end
+					out_finish<=1'b0; 
+				end
 			end
 		end
 		default:begin

@@ -28,7 +28,7 @@ module clock_control (
             hour_ones <= 4'd0;
             hour_tens <= 2'd0;	
         end else begin
-            // 处理时间调整 - 直接使用按键状态，不进行边沿检测
+            // 按键时钟设置，每一位都是一个计数器
             if (mode == CLOCK_SET_MODE && set_time) begin
                 case (pos)
                     3'd6: begin // 秒个位
