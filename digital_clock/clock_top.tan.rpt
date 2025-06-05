@@ -1,0 +1,489 @@
+Classic Timing Analyzer report for clock_top
+Wed May 21 15:59:08 2025
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                     ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                   ; To                                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------+---------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.000 ns                         ; set_clock                              ; mode_control:u_mode_controller|mode[0]            ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 24.000 ns                        ; mode_control:u_mode_controller|pos[1]  ; sec_ten_zero                                      ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 4.000 ns                         ; set_clock                              ; mode_control:u_mode_controller|mode[0]            ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 33.33 MHz ( period = 30.000 ns ) ; mode_control:u_mode_controller|mode[0] ; display_control:u_display_controller|seven_led[4] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                        ;                                                   ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------+---------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPM7128SLC84-15    ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 14          ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-14 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                  ; To                                                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_ones[1]      ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 33.33 MHz ( period = 30.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 25.000 ns               ;
+; N/A                                     ; 34.48 MHz ( period = 29.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; display_control:u_display_controller|seven_led[0]  ; clk        ; clk      ; None                        ; None                      ; 24.000 ns               ;
+; N/A                                     ; 34.48 MHz ( period = 29.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; display_control:u_display_controller|seven_led[0]  ; clk        ; clk      ; None                        ; None                      ; 24.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_minute_ones[0] ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_minute_tens[1] ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_tens[0]   ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_tens[1]   ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_ones[0]         ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_ones[0]   ; alarm_control:u_alarm_controller|alarm_ring_active ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_minute_ones[0] ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_minute_tens[1] ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_tens[0]   ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_tens[1]   ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_ones[0]         ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; alarm_control:u_alarm_controller|alarm_hour_ones[0]   ; alarm_control:u_alarm_controller|alarm_set         ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 43.48 MHz ( period = 23.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_ones[3]      ; clk        ; clk      ; None                        ; None                      ; 18.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|min_ones[3]       ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[0]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[1]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_tens[1]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[0]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[1]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_tens[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_ones[0]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; key_handle:u_key_handle|set_time                      ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[1]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[2]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[0]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_1hz                                    ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[3]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[0]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[2]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_tens[1]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_ones[3]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[0]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[2]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|min_tens[1]          ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[1]         ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_tens[0]         ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[2]         ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|hour_ones[3]         ; clock_control:u_clock_controller|hour_ones[2]      ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; display_control:u_display_controller|seven_led[1]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; display_control:u_display_controller|seven_led[1]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; display_control:u_display_controller|seven_led[3]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[0]                ; display_control:u_display_controller|seven_led[3]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; Hz_12:u_Hz|clk_2hz                                    ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[0]                 ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[2]                 ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|pos[1]                 ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[2]          ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[0]          ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; clock_control:u_clock_controller|sec_ones[1]          ; display_control:u_display_controller|seven_led[4]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.000 ns )                    ; mode_control:u_mode_controller|mode[1]                ; display_control:u_display_controller|seven_led[5]  ; clk        ; clk      ; None                        ; None                      ; 17.000 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                       ;                                                    ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                    ;
++-------+--------------+------------+---------------+-----------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From          ; To                                      ; To Clock ;
++-------+--------------+------------+---------------+-----------------------------------------+----------+
+; N/A   ; None         ; 4.000 ns   ; set_time_pre  ; key_handle:u_key_handle|set_time        ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_time_pre  ; key_handle:u_key_handle|set_time_pre_r  ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_shift_pre ; key_handle:u_key_handle|set_shift       ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_shift_pre ; key_handle:u_key_handle|set_shift_pre_r ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_alarm     ; mode_control:u_mode_controller|mode[1]  ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_clock     ; mode_control:u_mode_controller|mode[1]  ; clk      ;
+; N/A   ; None         ; 4.000 ns   ; set_clock     ; mode_control:u_mode_controller|mode[0]  ; clk      ;
++-------+--------------+------------+---------------+-----------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                               ;
++-------+--------------+------------+-----------------------------------------------------------+----------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                      ; To                   ; From Clock ;
++-------+--------------+------------+-----------------------------------------------------------+----------------------+------------+
+; N/A   ; None         ; 24.000 ns  ; Hz_12:u_Hz|clk_2hz                                        ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[1]                    ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[0]                     ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[0]                    ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[2]                     ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[1]                     ; hour_ten_zero2       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; Hz_12:u_Hz|clk_2hz                                        ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[1]                    ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[0]                     ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[0]                    ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[2]                     ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[1]                     ; hour_ten_zero1       ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; Hz_12:u_Hz|clk_2hz                                        ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[1]                    ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[0]                     ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[0]                    ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[2]                     ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[1]                     ; min_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; Hz_12:u_Hz|clk_2hz                                        ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[1]                    ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[0]                     ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|mode[0]                    ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[2]                     ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 24.000 ns  ; mode_control:u_mode_controller|pos[1]                     ; sec_ten_zero         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; ring:u_ring|speaker                                       ; speaker              ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; ring:u_ring|tone_divide[1]                                ; tone_divide[1]       ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; ring:u_ring|tone_divide[0]                                ; tone_divide[0]       ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_tens[1] ; display_hour_tens[1] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_tens[0] ; display_hour_tens[0] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_ones[3] ; display_hour_ones[3] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_ones[2] ; display_hour_ones[2] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_ones[1] ; display_hour_ones[1] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_hour_ones[0] ; display_hour_ones[0] ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_tens[2]  ; display_min_tens[2]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_tens[1]  ; display_min_tens[1]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_tens[0]  ; display_min_tens[0]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_ones[3]  ; display_min_ones[3]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_ones[2]  ; display_min_ones[2]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_ones[1]  ; display_min_ones[1]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_min_ones[0]  ; display_min_ones[0]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_sec_tens[2]  ; display_sec_tens[2]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_sec_tens[1]  ; display_sec_tens[1]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|display_sec_tens[0]  ; display_sec_tens[0]  ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[6]         ; seven_led[6]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[5]         ; seven_led[5]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[4]         ; seven_led[4]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[3]         ; seven_led[3]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[2]         ; seven_led[2]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[1]         ; seven_led[1]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; display_control:u_display_controller|seven_led[0]         ; seven_led[0]         ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; alarm_control:u_alarm_controller|time_ring                ; time_ring            ; clk        ;
+; N/A   ; None         ; 15.000 ns  ; alarm_control:u_alarm_controller|alarm_ring               ; alarm_ring           ; clk        ;
++-------+--------------+------------+-----------------------------------------------------------+----------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; th                                                                                                           ;
++---------------+-------------+-----------+---------------+-----------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From          ; To                                      ; To Clock ;
++---------------+-------------+-----------+---------------+-----------------------------------------+----------+
+; N/A           ; None        ; 4.000 ns  ; set_time_pre  ; key_handle:u_key_handle|set_time        ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_time_pre  ; key_handle:u_key_handle|set_time_pre_r  ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_shift_pre ; key_handle:u_key_handle|set_shift       ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_shift_pre ; key_handle:u_key_handle|set_shift_pre_r ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_alarm     ; mode_control:u_mode_controller|mode[1]  ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_clock     ; mode_control:u_mode_controller|mode[1]  ; clk      ;
+; N/A           ; None        ; 4.000 ns  ; set_clock     ; mode_control:u_mode_controller|mode[0]  ; clk      ;
++---------------+-------------+-----------+---------------+-----------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 21 15:59:08 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off clock_top -c clock_top
+Info: Parallel compilation is enabled and will use 4 of the 14 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 33.33 MHz between source register "mode_control:u_mode_controller|mode[1]" and destination register "clock_control:u_clock_controller|hour_ones[1]" (period= 30.0 ns)
+    Info: + Longest register to register delay is 25.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC36; Fanout = 138; REG Node = 'mode_control:u_mode_controller|mode[1]'
+        Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 9.000 ns; Loc. = LC60; Fanout = 12; COMB Node = 'clock_control:u_clock_controller|hour_ones~82'
+        Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 19.000 ns; Loc. = SEXP81; Fanout = 1; COMB Node = 'clock_control:u_clock_controller|hour_ones[1]~90'
+        Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 25.000 ns; Loc. = LC95; Fanout = 19; REG Node = 'clock_control:u_clock_controller|hour_ones[1]'
+        Info: Total cell delay = 21.000 ns ( 84.00 % )
+        Info: Total interconnect delay = 4.000 ns ( 16.00 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 10.000 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 93; CLK Node = 'clk'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC95; Fanout = 19; REG Node = 'clock_control:u_clock_controller|hour_ones[1]'
+            Info: Total cell delay = 8.000 ns ( 80.00 % )
+            Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+        Info: - Longest clock path from clock "clk" to source register is 10.000 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 93; CLK Node = 'clk'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC36; Fanout = 138; REG Node = 'mode_control:u_mode_controller|mode[1]'
+            Info: Total cell delay = 8.000 ns ( 80.00 % )
+            Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Micro setup delay of destination is 4.000 ns
+Info: tsu for register "key_handle:u_key_handle|set_time" (data pin = "set_time_pre", clock pin = "clk") is 4.000 ns
+    Info: + Longest pin to register delay is 10.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 2; PIN Node = 'set_time_pre'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC4; Fanout = 49; REG Node = 'key_handle:u_key_handle|set_time'
+        Info: Total cell delay = 8.000 ns ( 80.00 % )
+        Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+    Info: + Micro setup delay of destination is 4.000 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 10.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 93; CLK Node = 'clk'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC4; Fanout = 49; REG Node = 'key_handle:u_key_handle|set_time'
+        Info: Total cell delay = 8.000 ns ( 80.00 % )
+        Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+Info: tco from clock "clk" to destination pin "hour_ten_zero2" through register "Hz_12:u_Hz|clk_2hz" is 24.000 ns
+    Info: + Longest clock path from clock "clk" to source register is 10.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 93; CLK Node = 'clk'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC8; Fanout = 37; REG Node = 'Hz_12:u_Hz|clk_2hz'
+        Info: Total cell delay = 8.000 ns ( 80.00 % )
+        Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Longest register to pin delay is 13.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8; Fanout = 37; REG Node = 'Hz_12:u_Hz|clk_2hz'
+        Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 9.000 ns; Loc. = LC46; Fanout = 1; COMB Node = 'display_control:u_display_controller|hour_ten_zero1~13'
+        Info: 3: + IC(0.000 ns) + CELL(4.000 ns) = 13.000 ns; Loc. = PIN_24; Fanout = 0; PIN Node = 'hour_ten_zero2'
+        Info: Total cell delay = 11.000 ns ( 84.62 % )
+        Info: Total interconnect delay = 2.000 ns ( 15.38 % )
+Info: th for register "key_handle:u_key_handle|set_time" (data pin = "set_time_pre", clock pin = "clk") is 4.000 ns
+    Info: + Longest clock path from clock "clk" to destination register is 10.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 93; CLK Node = 'clk'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC4; Fanout = 49; REG Node = 'key_handle:u_key_handle|set_time'
+        Info: Total cell delay = 8.000 ns ( 80.00 % )
+        Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+    Info: + Micro hold delay of destination is 4.000 ns
+    Info: - Shortest pin to register delay is 10.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 2; PIN Node = 'set_time_pre'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC4; Fanout = 49; REG Node = 'key_handle:u_key_handle|set_time'
+        Info: Total cell delay = 8.000 ns ( 80.00 % )
+        Info: Total interconnect delay = 2.000 ns ( 20.00 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Wed May 21 15:59:12 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
+
+

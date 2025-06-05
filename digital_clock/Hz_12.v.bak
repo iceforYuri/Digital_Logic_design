@@ -1,0 +1,35 @@
+module Hz_12 (
+    input  wire clk,       // 输入时钟 (1kHz)
+    output reg clk_1hz,    // 1Hz 输出
+    output reg clk_2hz     // 2Hz 输出
+);
+    // 共用计数器，计数范围0-999
+    reg [9:0] counter;
+    
+    // 使用单个计数器为两个时钟分频
+    always @(posedge clk) begin
+        clk_1hz <= 1'b0; // 默认1Hz时钟为低电平
+        if (counter >= 10'd999) begin
+            // 重置计数器
+            counter <= 10'd0;
+            // 1Hz时钟翻转
+            clk_1hz <= 1'b1;
+            // 2Hz时钟一定会在此时翻转
+            clk_2hz <= ~clk_2hz;
+        end else if (counter == 10'd499) begin
+            // 在中间点翻转2Hz时钟
+            clk_2hz <= ~clk_2hz;
+            // 计数器继续计数
+            counter <= counter + 1'b1;
+        end else begin
+            // 正常计数
+            counter <= counter + 1'b1;
+        end
+    end
+    
+    // 初始化
+    initial begin
+        counter = 10'd0;
+    end
+    
+endmodule

@@ -1,0 +1,36 @@
+module ring(
+    input wire clk,      // 时钟信号
+    input wire ring1,
+    input wire ring2,     // ring信号
+    output reg speaker   // 扬声器控制信�?
+);
+    
+    // 闹钟1k，最小频�?260 模最大约20  因此可以�?8�?
+    reg [3:0] counter; 
+    
+    // 音调   时钟假设10kHz，此时音�?3 对应330
+    parameter tone_divide = 1000/(2*250);  
+
+    // 计数器逻辑
+    always @(posedge clk) begin
+        if (!ring1 && !ring2) begin
+            counter <= 0;
+        end else begin
+            if (counter == tone_divide) begin
+                counter <= 0;
+            end else begin
+                counter <= counter + 1;
+            end
+        end
+    end
+
+    // 扬声器逻辑
+    always @(posedge clk) begin
+        if (!ring1 && !ring2) begin
+            speaker <= 1'b0;
+        end else begin
+            speaker <= (counter <= tone_divide/2)? 1'b1 : 1'b0;
+        end
+    end
+
+endmodule

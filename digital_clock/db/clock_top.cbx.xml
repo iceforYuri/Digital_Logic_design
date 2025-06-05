@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="clock_top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_lnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|alarm_control:u_alarm_controller|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add5" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_mux:Mux0" CBX_FILE_NAME="mux_4cc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|ring:u_ring|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_mnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|alarm_control:u_alarm_controller|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_lnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_mnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_mux:Mux1" CBX_FILE_NAME="mux_4cc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|mode_control:u_mode_controller|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|ring:u_ring|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_mnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|Hz_12:u_Hz|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_4ph.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|alarm_control:u_alarm_controller|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_mux:Mux2" CBX_FILE_NAME="mux_4cc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|ring:u_ring|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_nnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|alarm_control:u_alarm_controller|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_mnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_mnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|clock_top|clock_control:u_clock_controller|lpm_mux:Mux3" CBX_FILE_NAME="mux_4cc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

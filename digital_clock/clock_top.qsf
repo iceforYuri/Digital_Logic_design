@@ -1,0 +1,101 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 09:13:48  April 24, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		clock_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SLC84-15"
+set_global_assignment -name TOP_LEVEL_ENTITY clock_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:13:48  APRIL 24, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name END_TIME "10 ms"
+set_global_assignment -name VERILOG_FILE alarm_control.v
+set_global_assignment -name VERILOG_FILE clock_control.v
+set_global_assignment -name VERILOG_FILE clock_top.v
+set_global_assignment -name VERILOG_FILE display_control.v
+set_global_assignment -name VERILOG_FILE Hz_12.v
+set_global_assignment -name VERILOG_FILE key_handle.v
+set_global_assignment -name VERILOG_FILE mode_control.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE 2.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE 2.vwf
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_57 -to clk
+set_location_assignment PIN_54 -to set_clock
+set_location_assignment PIN_81 -to set_alarm
+set_location_assignment PIN_1 -to set_shift_pre
+set_location_assignment PIN_60 -to set_time_pre
+set_location_assignment PIN_25 -to display_hour_ones[0]
+set_location_assignment PIN_45 -to seven_led[1]
+set_location_assignment PIN_44 -to seven_led[0]
+set_location_assignment PIN_46 -to seven_led[2]
+set_location_assignment PIN_48 -to seven_led[3]
+set_location_assignment PIN_49 -to seven_led[4]
+set_location_assignment PIN_50 -to seven_led[5]
+set_location_assignment PIN_51 -to seven_led[6]
+set_location_assignment PIN_37 -to display_sec_tens[0]
+set_location_assignment PIN_39 -to display_sec_tens[1]
+set_location_assignment PIN_40 -to display_sec_tens[2]
+set_location_assignment PIN_41 -to sec_ten_zero
+set_location_assignment PIN_35 -to display_min_ones[0]
+set_location_assignment PIN_36 -to display_min_ones[1]
+set_location_assignment PIN_17 -to display_min_ones[2]
+set_location_assignment PIN_18 -to display_min_ones[3]
+set_location_assignment PIN_30 -to display_min_tens[0]
+set_location_assignment PIN_31 -to display_min_tens[1]
+set_location_assignment PIN_33 -to display_min_tens[2]
+set_location_assignment PIN_34 -to min_ten_zero
+set_location_assignment PIN_27 -to display_hour_ones[1]
+set_location_assignment PIN_28 -to display_hour_ones[2]
+set_location_assignment PIN_29 -to display_hour_ones[3]
+set_location_assignment PIN_20 -to display_hour_tens[0]
+set_location_assignment PIN_21 -to display_hour_tens[1]
+set_location_assignment PIN_22 -to hour_ten_zero1
+set_location_assignment PIN_24 -to hour_ten_zero2
+set_global_assignment -name MISC_FILE "G:/verilog/0424ÈÕµ÷/20250426/20250424/clock_top.dpf"
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
+set_location_assignment PIN_63 -to rst_n
+set_global_assignment -name VERILOG_FILE ring.v
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/20250424/clock_top.dpf"
+set_location_assignment PIN_52 -to speaker
+set_global_assignment -name MISC_FILE "G:/verilog/20250430/clock_top.dpf"
