@@ -22,32 +22,7 @@ module clock_top (
     output wire [2:0] display_min_tens,
     output wire [3:0] display_hour_ones,
     output wire [1:0] display_hour_tens,
-
-    // output wire [1:0]tone_divide,      // 音调分频器
-    
-    
     output wire speaker
-    
-    // output wire [1:0] mode,
-    // output wire [2:0] pos,
-    // output wire alarm_set
-
-    // // 时钟数据
-     //output wire [3:0] sec_ones,
-     //output wire [3:0] min_ones,
-     //output wire [3:0] hour_ones,
-     //output wire [2:0] sec_tens,
-     //output wire [2:0] min_tens,
-     //output wire [1:0] hour_tens
-
-    
-    // 闹钟数据
-    // output wire [1:0] alarm_hour_tens,
-    // output wire [3:0] alarm_hour_ones,
-    // output wire [2:0] alarm_minute_tens,
-    // output wire [3:0] alarm_minute_ones,
-    // output wire [2:0] alarm_second_tens,
-    // output wire [3:0] alarm_second_ones
 );
     wire clk_1hz;          // 1Hz时钟信号
     wire clk_2hz;          // 2Hz时钟信号
@@ -124,7 +99,6 @@ module clock_top (
         .set_time(set_time),       // 添加了时间调整信号
         .mode(mode),
         .pos(pos),
-        // .time_pulse(time_pulse), // 这个信号不再需要
         .hour_tens(hour_tens),
         .hour_ones(hour_ones),
         .minute_tens(min_tens),
@@ -135,9 +109,6 @@ module clock_top (
         .alarm_hour_ones(alarm_hour_ones),
         .alarm_minute_tens(alarm_minute_tens),
         .alarm_minute_ones(alarm_minute_ones),
-        // .alarm_second_tens(alarm_second_tens),
-        // .alarm_second_ones(alarm_second_ones),
-        // .alarm_set(alarm_set),
         .alarm_ring(alarm_ring),
         .time_ring(time_ring)
     );
@@ -167,8 +138,6 @@ display_control u_display_controller(
     .alarm_hour_ones(alarm_hour_ones),
     .alarm_minute_tens(alarm_minute_tens),
     .alarm_minute_ones(alarm_minute_ones),
-    // .alarm_second_tens(alarm_second_tens),
-    // .alarm_second_ones(alarm_second_ones),
     .pos(pos),
     .sec_ten_zero(sec_ten_zero),
     .min_ten_zero(min_ten_zero),

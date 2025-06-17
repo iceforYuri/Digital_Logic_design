@@ -72,60 +72,6 @@ module ring(
             end
         end
     end
-
-    // // 闹钟控制逻辑
-    // always @(posedge clk or posedge ring1) begin
-    //     if (ring1 && !ring) begin
-    //         // ring1触发，开始闹铃
-    //         ring <= 1'b1;
-    //         ban <= 1'b1;
-    //         // tone_timer <= 2'b00;
-    //         tone_divide <= 2'b11;  // 开始使用第一个频率(330Hz)
-    //     end else if (clk_1hz_posedge) begin
-    //         // 每秒更新一次音调
-    //         if (tone_divide == 2'b00) begin
-    //             // 当计时满3秒时，停止闹铃
-    //             ring <= 1'b0;
-    //             ban <= 1'b0;
-    //         end else begin
-    //             // 计时未满，更新音调并增加计时器
-    //             // tone_timer <= tone_timer + 1'b1;
-    //             tone_divide <= tone_divide - 1'b1;  // 逐渐降低频率
-    //         end
-    //     end
-    // end
-
-
-    // always @(posedge clk or posedge ring2) begin
-    //     if(!ban)
-    //     begin
-    //         if (ring2 && !ring) begin
-    //             // ring1触发，开始闹铃
-    //             ring <= 1'b1;
-    //             ban <= 1'b1;
-    //             // tone_timer <= 2'b00;
-    //             tone_divide <= 2'b00;  // 开始使用第一个频率(330Hz)
-    //         end else if (clk_1hz_posedge) begin
-    //             // 每秒更新一次音调
-    //             if (tone_divide == 2'b11) begin
-    //                 // 当计时满3秒时，停止闹铃
-    //                 ring <= 1'b0;
-    //                 ban <= 1'b0;
-    //             end else begin
-    //                 // 计时未满，更新音调并增加计时器
-    //                 // tone_timer <= tone_timer + 1'b1;
-    //                 tone_divide <= tone_divide + 1'b1;  // 逐渐降低频率
-    //             end
-    //         end
-    //     end
-    // end
-    // always @(posedge ring2) begin
-    //     if(ban)
-    //     begin
-
-    //     tone_divide <= 2'b11; // 440Hz
-    // end
-
     // 计数器逻辑
     always @(posedge clk) begin
         // if (!ring1 && !ring2) begin

@@ -75,10 +75,10 @@ module display_control(
 				4'd3: bcd_to_seg = 7'b1001111; // 3
 				4'd4: bcd_to_seg = 7'b1100110; // 4
 				4'd5: bcd_to_seg = 7'b1101101; // 5
-				4'd6: bcd_to_seg = 7'b1111101; // 6
+				4'd6: bcd_to_seg = 7'b1111100; // 6
 				4'd7: bcd_to_seg = 7'b0000111; // 7
 				4'd8: bcd_to_seg = 7'b1111111; // 8
-				4'd9: bcd_to_seg = 7'b1101111; // 9
+				4'd9: bcd_to_seg = 7'b1100111; // 9
                 default: bcd_to_seg = 7'b0000000; // 全灭
             endcase
         end
