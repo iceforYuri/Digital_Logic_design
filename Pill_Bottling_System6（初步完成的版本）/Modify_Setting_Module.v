@@ -26,6 +26,19 @@ begin
 	endcase
 end
 
+always @(posedge in_PULSE,negedge in_CLR)
+begin
+    if (!in_CLR) begin
+        out_target_bottle_num <= (in_display_setting && (in_display_state == d_setting_bottle) ) ? 0 : out_target_bottle_num;
+        out_target_pill_num   <= (in_display_setting && (in_display_state == d_setting_pill) ) ? 0 : out_target_bottle_num;
+    end else begin
+		out_target_bottle_num <= 
+			(in_display_setting && (in_display_state == d_setting_bottle)) ? ((in_inc_five)?out_target_bottle_num+5:out_target_bottle_num + 1): out_target_bottle_num;
+		out_target_pill_num   <= 
+			(in_display_setting && (in_display_state == d_setting_pill))   ? ((in_inc_five)?out_target_pill_num + 5:out_target_pill_num+1)   : out_target_pill_num;
+	end
+end
+	
 /*
 always @(posedge in_PULSE , negedge in_CLR) begin
     out_target_bottle_num <= (!in_CLR) ? 0 : ((in_display_setting && (in_display_state == d_setting_bottle)) ? out_target_bottle_num + 1 : out_target_bottle_num);
@@ -33,6 +46,7 @@ always @(posedge in_PULSE , negedge in_CLR) begin
 end
 */
 
+	/*
 always @(posedge in_PULSE)
 begin
 		out_target_bottle_num <= 
@@ -40,5 +54,6 @@ begin
 		out_target_pill_num   <= 
 			(in_display_setting && (in_display_state == d_setting_pill))   ? ((in_inc_five)?out_target_pill_num + 5:out_target_pill_num+1)   : out_target_pill_num;
 end
+*/
 
 endmodule
